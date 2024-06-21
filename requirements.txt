@@ -1,0 +1,6 @@
+discord==2.3.2
+pandas==2.2.2
+pandas_ta==0.3.14b0
+ta==0.11.0
+TA-Lib==0.4.31
+yfinance==0.2.40
