@@ -4,6 +4,6 @@ then
     exit 1
 fi
 crontab -l > mycron
-echo "* * * * * cd $(pwd) && docker compose up -d" >> mycron
+echo "0 10 * * * cd $(pwd) && docker compose up -d" >> mycron
 sudo crontab mycron
 rm mycron
