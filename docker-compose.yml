@@ -1,0 +1,9 @@
+services:
+  inv_adv:
+    build: .
+    image: inv_adv
+    container_name: inv_adv
+    volumes:
+      - type: bind
+        source: .
+        target: /app
