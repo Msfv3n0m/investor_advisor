@@ -41,7 +41,7 @@ def sort_helper(indicator,buy,sell,neutral):
 
 def main():
     # init vars
-    ticker = 'AMZN'
+    ticker = 'TSM'
     # tickers = ['TSM','AAPL','GME',]
     # tickers = ['PLTR','GOOG','SRPT','AREB']
     # for ticker in tickers:
@@ -95,12 +95,12 @@ def main():
     file=open('trend.txt','r')
     with open('trend.txt','r') as f:
         contents = f.read()
-    if 'sell' in contents and len(buy) == len(indicators):
+    if 'sell' in contents and len(buy) >= len(indicators)-3:
         with open('trend.txt', 'w') as f:
             f.write('buy')
             webhook = SyncWebhook.from_url(url)
             webhook.send(ticker + ": strong buy")
-    elif 'buy' in contents and len(sell) == len(indicators):
+    elif 'buy' in contents and len(sell) >= len(indicators)-3:
         with open('trend.txt', 'w') as f:
             f.write('sell')
             webhook = SyncWebhook.from_url(url)
