@@ -8,7 +8,7 @@ This project mimics the functionality of [investing.com](investing.com)'s techni
 2. Create a discord webhook and assign it to the url variable
 If you want to run the program manually, Enter the following command:\
 `docker compose up -d`\
-To schedule it, run the `schedule.sh` script with the following command:\ 
+To schedule it, run the `schedule.sh` script with the following command:\
 `chmod +x schedule.sh && ./schedule.sh`
 ## Missing
 Technical indicators not implimented:
