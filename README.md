@@ -5,7 +5,7 @@ This project mimics the functionality of [investing.com](investing.com)'s techni
 * cron
 ## Usage
 1. Rename `myBot.py.example` to `myBot.py`
-2. Create a discord webhook and assign it to the url variable
+2. Create a discord webhook and assign it to the url variable\
 If you want to run the program manually, Enter the following command:\
 `docker compose up -d`\
 To schedule it, run the `schedule.sh` script with the following command:\
