@@ -2,5 +2,6 @@ FROM deepnox/python-ta-lib:latest
 WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt && \
-	rm requirements.txt
-CMD ["python3", "inv_adv.py"]
+	echo "0 10 * * * python3 /app/inv_adv.py" > mycron.txt && \
+	cat mycron.txt | crontab -
+ENTRYPOINT ["tail", "-f", "/dev/null"]

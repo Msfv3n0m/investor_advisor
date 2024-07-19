@@ -1,0 +1,1 @@
+0 10 * * * cd /app && docker compose up -d
