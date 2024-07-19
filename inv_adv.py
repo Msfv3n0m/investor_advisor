@@ -95,12 +95,12 @@ def main():
     file=open('trend.txt','r')
     with open('trend.txt','r') as f:
         contents = f.read()
-    if 'sell' in contents and len(buy) >= len(indicators)-3:
+    if 'sell' in contents and len(buy) >= len(indicators)-4:
         with open('trend.txt', 'w') as f:
             f.write('buy')
             webhook = SyncWebhook.from_url(url)
             webhook.send(ticker + ": strong buy")
-    elif 'buy' in contents and len(sell) >= len(indicators)-3:
+    elif 'buy' in contents and len(sell) >= len(indicators)-4:
         with open('trend.txt', 'w') as f:
             f.write('sell')
             webhook = SyncWebhook.from_url(url)
